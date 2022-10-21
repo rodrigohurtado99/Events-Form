@@ -1,0 +1,39 @@
+/* CSS das Semanas */
+body {
+    font-family: 'Prompt', sans-serif;
+    margin:2em;
+    font-size:20px;
+}
+.th-head{
+    text-align:center;
+    font-size:22px;
+}
+.voltar{
+    text-decoration:none;
+    color:black;
+}
+.voltar:hover{
+    transition:1;
+    color:grey;
+}
+.seta-direita{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 6%;
+    right: 10%;
+}
+.seta-esquerda{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 6%;
+    left: 10%;
+}
+.seta-direita:hover, .seta-esquerda:hover{
+    color: black;
+}

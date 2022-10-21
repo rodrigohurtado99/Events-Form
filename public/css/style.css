@@ -1,0 +1,190 @@
+/*CSS do Formulário*/
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
+    margin: 3em;
+    font-size: 18px;
+}
+fieldset{
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    border-bottom: 2px solid rgb(184, 177, 177);
+    background-color: rgba(236, 232, 232, 0.055);
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+h2{
+    background-color:rgba(41, 23, 97, 0.925);
+    color: rgba(255, 255, 255, 0.801);
+    margin:0px 0px 1em;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 18px;
+}
+.description{
+    margin: 1em;
+}
+.tipo-01, .tipo-02{
+    display: block;
+    padding: 5px;
+    margin: 1.2em;
+    min-width: 80%;
+    font-size: 15px;
+}
+.input-types input:focus, textarea {
+    outline: 0;
+    color: rgb(70, 66, 66);
+}
+.padd{
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid rgb(180, 176, 176);
+}
+.select-types{
+    display: grid;
+    grid-template-columns: repeat(3, 7.1em);
+    grid-auto-rows: auto;
+}
+.select-types select{
+    display: block;
+    width: 60%;
+    color: rgb(85, 84, 84);
+    font-size: 16px;
+}
+select:focus{
+    outline: 0;
+}
+.date input{
+    padding: 15px;
+    border-radius: 5px;
+    border-color: rgb(240, 229, 229);
+    color: rgb(131, 126, 126);
+    font-size: 16px;
+}
+.date-css{
+    display: block;
+    margin: 1.2em;
+}
+.date-css:focus{
+    outline: 0;
+}
+.grid-right{
+    display: grid;
+    grid-template-columns: repeat(2 , 1.5fr);
+}
+.choice label{
+    position: relative;
+    color: rgb(124, 120, 120);
+    margin: 15px;
+    display: block;
+}
+.choice label input[type='radio']{
+    margin: right 10px;
+    opacity: 0;
+}
+.choice label .check{
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ccc;
+}
+.choice label .check::after{
+    content: '';
+    position: absolute;
+    width: 4.2px;
+    height: 4.2px;
+    border: 7px solid rgba(32, 8, 97, 0.884);
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    transition: .5s;
+    transform: scale(0);
+}
+.choice label .ativo:checked ~ .check::after{
+    transform: scale(1);
+}
+.choice .range-type{
+    display: block;
+}
+.btn-type{
+    padding: 10px;
+    color: rgb(221, 213, 213);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: rgba(41, 23, 97, 0.925);
+    position: relative;
+}
+.btn-salvar input{
+    position: absolute;
+    top: 90%;
+    right: 5%;
+}
+.table-php{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin: 2em;
+}
+.th-head{
+    text-align: center;
+}
+/*MOBILE SCREEN*/
+@media screen and (max-width:420px){
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 50px 0px 0px 0px;
+        }
+        .btn-salvar input{
+            top: 90%;
+            right: 5%;
+        }
+        .grid-right{
+            display: block;
+        }
+        .choice{
+            margin-left: 5px;
+        }
+        .select-types{
+            padding-top: 1em;
+        }
+        .btn-salvar{
+            margin-top: 1.1em;
+        }
+@media screen and (max-width:379px){
+        .btn-salvar{
+            position: absolute;
+            top: 100px;
+            left: 150px;
+            
+        }
+        fieldset{
+            min-width: 100px;
+            padding-bottom: 3em;
+            position: relative;
+        }
+        .select-types{
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+}
+}
+@media screen and (max-width:298px){
+    .tipo-01, textarea{
+        width: 0;
+        
+    }
+    .select-types{
+        display: block;
+    }
+    .btn-salvar{
+        top: 100%;
+    }
+}
